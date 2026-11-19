@@ -1,12 +1,27 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+
+export interface Producto {
+  nombre: string;
+  precio: number;
+  disponible: boolean;
+}
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  imports: [],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('presentacion-producto');
+  nombreTienda: string = 'Tienda Central';
+  encargado: string = 'Saravia Magne Ayelen Brenda';
+  numeroSucursal: number = 1;
+  tiendaAbierta: boolean = true;
+  categorias: string[] = ['Celulares', 'Cuadernos', 'Mochilas'];
+
+  producto: Producto = {
+    nombre: 'Cuaderno Universitario A4',
+    precio: 25,
+    disponible: true
+  };
 }
