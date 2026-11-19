@@ -16,12 +16,12 @@ export class App {
   nombreTienda: string = 'Tienda Central';
   encargado: string = 'Saravia Magne Ayelen Brenda';
   numeroSucursal: number = 1;
-  tiendaAbierta: boolean = true;
-  categorias: string[] = ['Celulares', 'Cuadernos', 'Mochilas'];
+  tiendaAbierta: boolean = false; // 1. Cambiado de true a false
+  categorias: string[] = ['Celulares', 'Cuadernos', 'Mochilas', 'Accesorios']; // 3. Cuarta categoría agregada
 
   producto: Producto = {
-    nombre: 'Cuaderno Universitario A4',
-    precio: 25,
-    disponible: true
+    nombre: 'Mochila Escolar Impermeable', // 4. Nombre modificado
+    precio: 120, // 4. Precio modificado
+    disponible: false // 2. Cambiado de true a false
   };
 }
